@@ -8,7 +8,7 @@ import { RkCard } from 'react-native-ui-kitten';
 import IconDetail from './IconDetail'
 import UserDetail from './UserDetail'
 
-const MenuItem = ({ id, username, userImg, menuImg, description, peopleJoin, peopleLimit, price, appointDatetime, onPressItem }) => {
+const PartyItem = ({ id, username, userImg, menuImg, description, peopleJoin, peopleLimit, price, appointDatetime, onPressItem }) => {
     const onPress = () => {
         onPressItem(id)
     }
@@ -34,4 +34,4 @@ const MenuItem = ({ id, username, userImg, menuImg, description, peopleJoin, peo
     )
 }
 
-export default MenuItem
+export default PartyItem

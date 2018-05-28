@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Expo from 'expo';
 
 import { View, Text, Alert } from 'react-native';
 import { FormLabel, FormInput, Button } from 'react-native-elements';

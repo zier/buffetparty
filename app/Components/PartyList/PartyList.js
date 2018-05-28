@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 
 import { FlatList, RefreshControl } from 'react-native';
 
-import MenuItem from '../MenuItem/MenuItem';
+import PartyItem from '../PartyItem/PartyItem';
 
-const ListMenu = ({ menuItems, onPressItem, onRefresh }) => {
+const PartyList = ({ partyItems, onPressItem, onRefresh }) => {
     state = {
         refreshing: false
     }
 
-    const renderRow = (menu) => <MenuItem onPressItem={onPressItem} {...menu.item} />
+    const renderRow = (menu) => <PartyItem onPressItem={onPressItem} {...menu.item} />
     const keyExtractor = (menu, index) => '_' + index
 
     return <FlatList 
         style={{backgroundColor: '#E0E0E0', paddingLeft: 10, paddingRight: 10, paddingBottom: 50 }} 
         keyExtractor={keyExtractor} 
-        data={menuItems} 
+        data={partyItems} 
         renderItem={renderRow}
         refreshControl={
             <RefreshControl
@@ -26,4 +26,4 @@ const ListMenu = ({ menuItems, onPressItem, onRefresh }) => {
      />
 }
 
-export default ListMenu;
+export default PartyList;
