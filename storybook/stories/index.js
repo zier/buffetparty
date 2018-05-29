@@ -10,6 +10,7 @@ import CenterView from './CenterView';
 import LoginForm from '../../app/Components/LoginForm/LoginForm'
 import PartyItem from '../../app/Components/PartyItem/PartyItem'
 import PartyList from '../../app/Components/PartyList/PartyList'
+import PartyDetail from '../../app/Components/PartyDetail/PartyDetail'
 
 storiesOf('LoginForm', module)
     .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
@@ -71,3 +72,8 @@ const partyItems = [
 
 storiesOf('PartyList', module)
     .add('sample data', () => (<PartyList onRefresh={action('onRefresh')} onPressItem={action('onPressItem')} partyItems={partyItems} />))
+
+
+storiesOf('PartyDetail', module)
+    .add('sample data', () => (<PartyDetail {...partyItem} />))
+    
